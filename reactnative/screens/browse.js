@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet, Image, ScrollView } from 'react-native';
 
 import { colors } from '../styles/global'
 
@@ -11,8 +11,18 @@ const Browse = () => {
     const doshGNC = require('../assets/sample-dosh/gnc.png')
     const doshPizzaHut = require('../assets/sample-dosh/pizza-hut.jpeg')
 
+    const ecoBrew = require("../assets/sample-dosh/eco-brewery.png")
+    const ecoImperfect = require("../assets/sample-dosh/eco-imperfect.png")
+    const ecoMarket = require("../assets/sample-dosh/eco-market.png")
+    const ecoMeat = require("../assets/sample-dosh/eco-meat.png")
+    const ecoPatagonia = require("../assets/sample-dosh/eco-patagonia.png")
+    const ecoPaw = require("../assets/sample-dosh/eco-paw.png")
+    const ecoSeventh = require("../assets/sample-dosh/eco-seventh.png")
+    const ecoSwim = require("../assets/sample-dosh/eco-swim.png")
+    const ecoWild = require("../assets/sample-dosh/eco-wild.png")
+
     return (
-        <View style={styles.browseContainer}>
+        <ScrollView style={styles.browseContainer}>
             <View style={styles.header}>
                 <Text style={styles.title}>Browse</Text>
             </View>
@@ -20,18 +30,18 @@ const Browse = () => {
                 <View style={styles.row1}>
                     <View style={styles.card}>
                         <View style={styles.cardImageWrapper}>
-                            <Image style={styles.cardImage} source={doshAmazon} />
+                            <Image style={styles.cardImage} source={ecoBrew} />
                         </View>
-                        <Text style={styles.cardTitle}>Amazon</Text>
+                        <Text style={styles.cardTitle}>New Belgium Brewery</Text>
                         <Text style={styles.cardDesc}>
                             <Text style={styles.cardTag}>500</Text> points
                         </Text>
                     </View>
                     <View style={styles.card}>
                         <View style={styles.cardImageWrapper}>
-                            <Image style={styles.appleCardImage} source={doshApple} />
+                            <Image style={styles.appleCardImage} source={ecoImperfect} />
                         </View>
-                        <Text style={styles.cardTitle}>Apple</Text>
+                        <Text style={styles.cardTitle}>Imperfect Foods</Text>
                         <Text style={styles.cardDesc}>
                             <Text style={styles.cardTag}>630</Text> points
                         </Text>
@@ -40,18 +50,18 @@ const Browse = () => {
                 <View style={styles.row2}>
                     <View style={styles.card}>
                         <View style={styles.cardImageWrapper}>
-                            <Image style={styles.cardImage} source={doshDisneyPlus} />
+                            <Image style={styles.cardImage} source={ecoMarket} />
                         </View>
-                        <Text style={styles.cardTitle}>Disney Plus</Text>
+                        <Text style={styles.cardTitle}>Misfits Market</Text>
                         <Text style={styles.cardDesc}>
                             <Text style={styles.cardTag}>90</Text> points
                         </Text>
                     </View>
                     <View style={styles.card}>
                         <View style={styles.cardImageWrapper}>
-                            <Image style={styles.cardImage} source={doshDunkinDonuts} />
+                            <Image style={styles.cardImage} source={ecoMeat} />
                         </View>
-                        <Text style={styles.cardTitle}>Dunkin Donuts</Text>
+                        <Text style={styles.cardTitle}>Beyond Meat</Text>
                         <Text style={styles.cardDesc}>
                             <Text style={styles.cardTag}>189</Text> points
                         </Text>
@@ -60,18 +70,49 @@ const Browse = () => {
                 <View style={styles.row3}>
                     <View style={styles.card}>
                         <View style={styles.cardImageWrapper}>
-                            <Image style={styles.cardImage} source={doshGNC} />
+                            <Image style={styles.cardImage} source={ecoPatagonia} />
                         </View>
-                        <Text style={styles.cardTitle}>GNC</Text>
+                        <Text style={styles.cardTitle}>Patagonia</Text>
                         <Text style={styles.cardDesc}>
                             <Text style={styles.cardTag}>212</Text> points
                         </Text>
                     </View>
                     <View style={styles.card}>
                         <View style={styles.cardImageWrapper}>
-                            <Image style={styles.cardImage} source={doshPizzaHut} />
+                            <Image style={styles.cardImage} source={ecoPaw} />
                         </View>
-                        <Text style={styles.cardTitle}>Pizza Hut</Text>
+                        <Text style={styles.cardTitle}>West Paw</Text>
+                        <Text style={styles.cardDesc}>
+                            <Text style={styles.cardTag}>120</Text> points
+                        </Text>
+                    </View>
+                </View>
+                <View style={styles.row4}>
+                    <View style={styles.card}>
+                        <View style={styles.cardImageWrapper}>
+                            <Image style={styles.cardImage} source={ecoSeventh} />
+                        </View>
+                        <Text style={styles.cardTitle}>Seventh Generation</Text>
+                        <Text style={styles.cardDesc}>
+                            <Text style={styles.cardTag}>110</Text> points
+                        </Text>
+                    </View>
+                    <View style={styles.card}>
+                        <View style={styles.cardImageWrapper}>
+                            <Image style={styles.cardImage} source={ecoSwim} />
+                        </View>
+                        <Text style={styles.cardTitle}>A'ray Swim</Text>
+                        <Text style={styles.cardDesc}>
+                            <Text style={styles.cardTag}>90</Text> points
+                        </Text>
+                    </View>
+                </View>
+                <View style={styles.row5}>
+                    <View style={styles.card}>
+                        <View style={styles.cardImageWrapper}>
+                            <Image style={styles.cardImage} source={ecoWild} />
+                        </View>
+                        <Text style={styles.cardTitle}>Wild Comestics</Text>
                         <Text style={styles.cardDesc}>
                             <Text style={styles.cardTag}>120</Text> points
                         </Text>
@@ -79,7 +120,7 @@ const Browse = () => {
                 </View>
                 <Text style={styles.soon}>Many more coming soon...</Text>
             </View>
-        </View>
+        </ScrollView>
     )
 }
 
@@ -107,6 +148,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     row3: {
+        display: 'flex',
+        flexDirection: 'row',
+    },
+    row4: {
+        display: 'flex',
+        flexDirection: 'row',
+    },
+    row5: {
         display: 'flex',
         flexDirection: 'row',
     },
@@ -154,7 +203,8 @@ const styles = StyleSheet.create({
         color: colors.w
     },
     soon: {
-        textAlign: 'center'
+        textAlign: 'center',
+        marginTop: 20
     }
 })
 

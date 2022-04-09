@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Malachi",
+    "name": "malachi",
     "slug": "malachi",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -27,8 +27,6 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "description": "Malachi Project for Hack to the Future 4",
-    "githubUrl": "https://github.com/Nate8888/Malachi---HTTF4"
+    }
   }
 }
